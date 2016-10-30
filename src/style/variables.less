@@ -1,0 +1,11 @@
+@baseFont: 10;
+.fsize(@sizeValue: @baseFont, @content: @baseFont) {
+    @remValue: @sizeValue/10;
+    font-size: ~"@{remValue}rem";
+}
+.width(@childWidth, @parentWidth) {
+    width: (@childWidth/@parentWidth)*100%;
+}
+
+/*colors*/
+@white: #fff;
