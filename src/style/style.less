@@ -40,6 +40,21 @@ body {
 }
 .section-sochi-benefits {
     padding: 10rem 0 3.8rem;
+    .section-title {
+        margin-bottom: 8rem;
+    }
+}
+.section-reasons {
+    padding: 4rem 0 14.5rem;
+    .container {
+        position: relative;
+    }
+    .section-title {
+        margin-bottom: 8rem;
+    }
+}
+.section-cooperation {
+    padding: 9rem 0 3rem;
 }
 
 
@@ -353,6 +368,18 @@ header {
         font-weight: 600;
         color: @white;
     }
+    .decor {
+        display: inline-block;
+        vertical-align: top;
+        margin: 1.3rem 0 0 0.5rem;
+        width: 7.9rem;
+        height: 2px;
+        background: @title-blue;
+        &.long {
+            margin: 3.1rem 0 0 3.5rem;
+            width: 16rem;
+        }
+    }
 }
 .section-strategy__text {
     display: block;
@@ -485,18 +512,20 @@ header {
             border-radius: 50%;
             left: 2rem;
             top: -2.8rem;
-            border: 3px solid #2CD5D5;
+            border: 3px solid #7EE5E5;
         }
     }
 }
-
 .sochi-benefits {
     display: inline-block;
-    width: 30%;
+    width: 24%;
 }
 .sochi-benefit {
     display: block;
     margin: 7.5rem 0 0;
+    &:first-child {
+        margin-top: 12rem;
+    }
     &__num {
         display: block;
         margin: 0;
@@ -512,12 +541,122 @@ header {
     }
 }
 .sochi-benefit-image {
+    position: relative;
+    display: inline-block;
+    width: 63%;
+    float: right;
     img {
         display: block;
     }
 }
-
-
+.sochi-benefit-decor {
+    position: absolute;
+    display: block;
+    &.circle {
+        width: 8.3rem;
+        height: 8.3rem;
+        top: 23rem;
+        left: -6.4rem;
+        border: 3px solid #7EE5E5;
+        border-radius: 50%;
+    }
+    &.line {
+        right: -11rem;
+        top: 0;
+        height: 2px;
+        width: 22rem;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background: #2CD5D5;
+    }
+}
+.reasons-wrap {
+    display: flex;
+    justify-content: space-between;
+    &.big {
+        .reason-item {
+            height: 16rem;
+        }
+    }
+}
+.reason-item {
+    position: relative;
+    display: inline-block;
+    width: 17.5%;
+    height: 14.4rem;
+    border: 2px solid fade(@black, 5%);
+    &__num {
+        position: absolute;
+        left: 1.5rem;
+        top: -1.6rem;
+        font-weight: 700;
+        .fsize(24);
+        color: #514EFF;
+    }
+    &__text {
+        margin: 0;
+        .centered;
+        .fsize(16);
+        display: inline-block;
+        position: relative;
+    }
+    &.color-border {
+        border: none;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(157,140,255); /* Old browsers */
+            background: -moz-linear-gradient(45deg,  rgba(157,140,255,1) 0%, rgba(121,237,238,1) 78%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(45deg,  rgba(157,140,255,1) 0%,rgba(121,237,238,1) 78%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(45deg,  rgba(157,140,255,1) 0%,rgba(121,237,238,1) 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d8cff', endColorstr='#79edee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 2px;
+            right: 2px;
+            bottom: 2px;
+            left: 2px;
+            background: @white;
+        }
+    }
+}
+.reasons-decor {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    &.circle {
+        width: 8.3rem;
+        height: 8.3rem;
+        top: 16rem;
+        right: 3.5rem;
+        border: 3px solid #7EE5E5;
+        border-radius: 50%;
+    }
+    &.line {
+        left: 8.1rem;
+        top: 0.7rem;
+        height: 2px;
+        width: 29rem;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background: #7EE5E5;
+    }
+}
 
 
 
