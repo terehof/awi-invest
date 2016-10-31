@@ -5,8 +5,522 @@
 @import "popups";
 
 html {
-    
+    font-size: 10px;
+    font-family: 'Proxima Nova', Arial;
+    font-weight: 400;
 }
-h1 {
-    background: @white;
+body {
+    * {
+        box-sizing: border-box;
+    }
 }
+.main-wrapper {
+    overflow: hidden;
+}
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.section {
+
+}
+.section-intro {
+    background: url(../img/intro-bg.jpg) center/cover no-repeat;
+}
+.section-strategy {
+    padding: 13.6rem 0 9.8rem;
+}
+.section-benefits {
+    padding: 7.8rem 0 6.2rem;
+    background: url(../img/sect-benefit-bg.jpg) center/cover no-repeat;
+}
+.section-about-us {
+    padding: 9.6rem 0 5rem;
+}
+.section-sochi-benefits {
+    padding: 10rem 0 3.8rem;
+}
+
+
+
+
+
+.main-logo {
+    display: inline-block;
+    width: 11.3rem;
+    text-decoration: none;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+header {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+}
+.intro-blocks {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    &:before {
+        content: '';
+        display: inline-block;
+        background: url(../img/arrow-down.svg) 100% 100% no-repeat;
+        position: absolute;
+        z-index: 1;
+        width: 1.8rem;
+        height: 1rem;
+        bottom: 3.6rem;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+}
+.intro-block {
+    position: relative;
+    width: 50%;
+    height: 35rem;
+    color: @white;
+    cursor: pointer;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    -ms-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 1000px;
+        background: none;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        -ms-transition: background 0.3s ease-in-out;
+        -o-transition: background 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out;
+    }
+    &:nth-child(1) {
+        border-right: 1px solid fade(#fff, 25%);
+        border-bottom: 1px solid fade(#fff, 25%);
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1000px;
+            bottom: -1px;
+            right: 100%;
+            background: fade(#fff, 25%);
+        }
+        .intro-hover__num {
+            left: 0;
+        }
+        .intro-hover__benefits {
+            left: 0;
+            right: 2.2rem;
+        }
+    }
+    &:nth-child(2) {
+        border-left: 1px solid fade(#fff, 25%);
+        border-bottom: 1px solid fade(#fff, 25%);
+        &:before {
+            left: 100%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1000px;
+            bottom: -1px;
+            left: 100%;
+            background: fade(#fff, 25%);
+        }
+        .intro-hover__num {
+            left: 6rem;
+        }
+        .intro-block__title {
+            right: 0;
+        }
+        .intro-hover__benefits {
+            left: 6rem;
+            right: 0;
+        }
+    }
+    &:nth-child(3) {
+        border-top: 1px solid fade(#fff, 25%);
+        border-right: 1px solid fade(#fff, 25%);
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1000px;
+            top: -1px;
+            right: 100%;
+            background: fade(#fff, 25%);
+        }
+        .intro-hover__num {
+            left: 0;
+        }
+        .intro-hover__benefits {
+            left: 0;
+            right: 2.2rem;
+        }
+    }
+    &:nth-child(4) {
+        border-top: 1px solid fade(#fff, 25%);
+        border-left: 1px solid fade(#fff, 25%);
+        &:before {
+            left: 100%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1000px;
+            top: -1px;
+            left: 100%;
+            background: fade(#fff, 25%);
+        }
+        .intro-block__title {
+            right: 0;
+        }
+        .intro-hover__num {
+            left: 6rem;
+        }
+        .intro-hover__benefits {
+            left: 6rem;
+            right: 0;
+        }
+    }
+    &__title {
+        position: absolute;
+        top: 3.3rem;
+        right: 2.3rem;
+        margin: 0;
+        font-weight: 600;
+        .fsize(18);
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -16px;
+            width: 16px;
+            height: 2px;
+            background: @white;
+        }
+    }
+
+    &:hover {
+        background: @blue;
+        &:before {
+            background: @blue;
+        }
+        .intro-block__hover {
+            opacity: 1;
+        }
+    }
+}
+.intro-block__hover {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    will-change: opacity;
+}
+.intro-hover {
+    pointer-events: none;
+    &__num {
+        position: absolute;
+        top: 3.4rem;
+        left: 6rem;
+        font-weight: 700;
+        .fsize(24);
+        i {
+            position: absolute;
+            top: 4px;
+            left: -28px;
+            display: inline-block;
+            width: 15px;
+            height: 18px;
+            background: url(../img/icon-house.svg) 100% no-repeat;
+        }
+    }
+    &__benefits {
+        display: block;
+        position: absolute;
+        bottom: 3.5rem;
+        left: 6rem;
+        right: 0;
+    }
+    &__benefit {
+        display: block;
+        margin: 2.2rem 0 0;
+        .clearfix;
+        strong {
+            display: block;
+            .fsize(32);
+            font-weight: 700;
+        }
+        small {
+            display: block;
+            .fsize(12);
+            font-weight: 400;
+        }
+        .icon-arrow-up {
+            display: inline-block;
+            margin: 0 0 0 0.2rem;
+            width: 13px;
+            height: 23px;
+            background: url(../img/icon-arrow-up.svg) 100% no-repeat;
+        }
+    }
+
+
+}
+.section-title {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    .fsize(30);
+    line-height: 1.6;
+    font-weight: 600;
+    letter-spacing: 1.1rem;
+    color: @black;
+    span {
+        color: @title-blue;
+        &.dark {
+            color: @title-blue-dark;
+        }
+    }
+    &.decored {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 7.9rem;
+            height: 2px;
+            background: @title-blue;
+        }
+        &-bottom {
+            &:after {
+                position: static;
+                margin: 1.7rem 0 0;
+            }
+        }
+        &-right {
+            &:after {
+                top: 50%;
+                right: -11.5rem;
+                -webkit-transform: translate(0, -50%);
+                -moz-transform: translate(0, -50%);
+                -ms-transform: translate(0, -50%);
+                -o-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+            }
+        }
+        &-right-bottom {
+            &:after {
+                display: inline-block;
+                position: static;
+                vertical-align: top;
+                margin: 3.1rem 0 0;
+            }
+        }
+    }
+    &.light {
+        letter-spacing: 1.5rem;
+        font-weight: 600;
+        color: @white;
+    }
+}
+.section-strategy__text {
+    display: block;
+    width: 55%;
+    margin: 3rem 0 0;
+    color: #2d2d2d;
+    .fsize(20);
+    letter-spacing: 1px;
+}
+.btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 1.7rem 7.5rem;
+    background: @btn-bg;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: @white;
+    text-decoration: none;
+    .fsize(14);
+    letter-spacing: 0.75px;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    -ms-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+        background: darken(@btn-bg, 7%);
+    }
+    &:active {
+        top: 1px;
+        background: darken(@btn-bg, 7%);
+        box-shadow: inset 0 0.3rem 0.7rem darken(@btn-bg, 40%);
+    }
+    &.btn-strategy {
+        float: right;
+        vertical-align: top;
+        margin-top: 4rem;
+    }
+}
+.benefits-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem 0 0;
+}
+.benefit-item {
+    position: relative;
+    display: inline-block;
+    height: 17.5rem;
+    width: 21.25%;
+    border: 2px solid #AFAFAF;
+    color: @white;
+    .fsize(18);
+    &__num {
+        position: absolute;
+        left: 1.3rem;
+        top: -2.5rem;
+        font-weight: 700;
+        .fsize(36);
+    }
+    &__text {
+        margin: 0;
+        .centered;
+        display: inline-block;
+        position: relative;
+    }
+}
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem 0 0;
+}
+.team-member {
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    color: #000;
+    &__image {
+        display: block;
+        width: 100%;
+    }
+    &__name {
+        display: block;
+        margin: 3rem 0 0;
+        .fsize(24);
+        font-weight: 600;
+    }
+    &__descrip {
+        display: block;
+        margin: 1.6rem 0 0;
+        font-weight: 400;
+        .fsize(20);
+    }
+    &__link {
+        display: inline-block;
+        margin: 4.6rem 0 0;
+        text-decoration: none;
+        font-weight: 600;
+        .fsize(20);
+        color: @blue;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__decor {
+        position: absolute;
+        display: block;
+    }
+    &:nth-child(1) {
+        .team-member__decor {
+            right: -11rem;
+            top: 22rem;
+            height: 2px;
+            width: 22rem;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background: #2CD5D5;
+        }
+    }
+    &:nth-child(2) {
+        .team-member__decor {
+            width: 5.6rem;
+            height: 5.6rem;
+            border-radius: 50%;
+            left: 2rem;
+            top: -2.8rem;
+            border: 3px solid #2CD5D5;
+        }
+    }
+}
+
+.sochi-benefits {
+    display: inline-block;
+    width: 30%;
+}
+.sochi-benefit {
+    display: block;
+    margin: 7.5rem 0 0;
+    &__num {
+        display: block;
+        margin: 0;
+        .fsize(14);
+        color: @blue;
+        font-weight: 700;
+    }
+    &__text {
+        display: block;
+        margin: 2.6rem 0 0;
+        .fsize(16);
+        font-weight: 400;
+    }
+}
+.sochi-benefit-image {
+    img {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+

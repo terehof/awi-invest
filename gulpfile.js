@@ -23,14 +23,14 @@ var path = {
         js: 'build/js/',
         html: 'build/',
         css: 'build/css/',
-        img: 'build/images/',
+        img: 'build/img/',
         fonts: 'build/fonts/'
     },
     src: {
         js: 'src/js/**/**/*.js',
         style: 'src/style/style.less',
         html: 'src/*.html',
-        img: 'src/images/**/*.*',
+        img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
 
@@ -38,7 +38,7 @@ var path = {
         html: 'src/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.less',
-        img: 'src/images/**/*.*',
+        img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
