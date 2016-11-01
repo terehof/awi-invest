@@ -54,7 +54,13 @@ body {
     }
 }
 .section-cooperation {
-    padding: 9rem 0 3rem;
+    padding: 9rem 0 6rem;
+}
+.section-faq {
+    padding: 4rem 0 0;
+    .section-title {
+        margin-bottom: 4rem;
+    }
 }
 
 
@@ -657,8 +663,161 @@ header {
         background: #7EE5E5;
     }
 }
+.cooperation-blocks {
+    margin: 12.5rem 0 0;
+    .clearfix;
+}
+.cooperation-block {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
+    height: 37.6rem;
+    border: 4px solid fade(@black, 5%);
+    background: @white;
+    &:nth-child(1) {
+        float: left;
+        margin-top: auto;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            right: 100%;
+            top: -7rem;
+            width: 700px;
+            height: 4px;
+            -webkit-transform: rotate(30deg) translate(7.5%, 0);
+            -moz-transform: rotate(30deg) translate(7.5%, 0);
+            -ms-transform: rotate(30deg) translate(7.5%, 0);
+            -o-transform: rotate(30deg) translate(7.5%, 0);
+            transform: rotate(30deg) translate(7.5%, 0);
+            background: fade(@black, 5%);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            left: 100%;
+            top: 27rem;
+            width: 20%;
+            height: 4px;
+            -webkit-transform: rotate(30deg) translate(-5%, 0);
+            -moz-transform: rotate(30deg) translate(-5%, 0);
+            -ms-transform: rotate(30deg) translate(-5%, 0);
+            -o-transform: rotate(30deg) translate(-5%, 0);
+            transform: rotate(30deg) translate(-5%, 0);
+            background: fade(@black, 5%);
+        }
+    }
+    &:nth-child(2) {
+        float: right;
+        margin-top: 22rem;
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            left: 100%;
+            top: 32rem;
+            width: 700px;
+            height: 4px;
+            -webkit-transform: rotate(30deg) translate(-7.5%, 0);
+            -moz-transform: rotate(30deg) translate(-7.5%, 0);
+            -ms-transform: rotate(30deg) translate(-7.5%, 0);
+            -o-transform: rotate(30deg) translate(-7.5%, 0);
+            transform: rotate(30deg) translate(-7.5%, 0);
+            background: fade(@black, 5%);
+        }
+    }
+    &__title {
+        position: absolute;
+        .fsize(14);
+        left: 0;
+        top: -2rem;
+        letter-spacing: 0.5rem;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        span {
+            color: #5CDABA;
+        }
+    }
+    &__text {
+        width: 80%;
+        margin: 0;
+        .centered;
+        .fsize(16);
+    }
+    &__btn {
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 50%);
+        &:active {
+            position: absolute;
+            top: auto;
+            margin-top: 1px;
+        }
+    }
+}
 
-
+.faq-image {
+    display: inline-block;
+    width: 37%;
+    &.image-1 {
+        float: left;
+        margin-right: 10%;
+        margin-bottom: 3rem;
+        img {
+            float: right;
+        }
+    }
+    &.image-2 {
+        float: right;
+        margin-top: 12rem;
+        width: 39.5%;
+    }
+}
+.faq-item {
+    display: inline-block;
+    width: 46%;
+    margin: 7rem 0 0;
+    &:first-child {
+        margin-top: 0;
+    }
+    &__num {
+        display: block;
+        margin: 0 0 1rem;
+        color: @blue;
+        .fsize(36);
+        font-weight: 700;
+    }
+    &__title {
+        display: block;
+        margin: 0 0 2.2rem;
+        .fsize(24);
+        font-weight: 600;
+    }
+    &__text {
+        display: block;
+        margin: 0 0 2rem;
+        .fsize(20);
+    }
+    &__link {
+        color: @blue;
+        .fsize(20);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
 
 
 
