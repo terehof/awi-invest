@@ -1,11 +1,16 @@
 var app = app || {};
 app.main = {
-    test: function () {
-        console.log('wahoo!');
+    sliders: function () {
+        var $casesSlider = $('.cases-slider');
+        if ($casesSlider.length > 0) {
+            $casesSlider.slick({
+
+            });
+        }
     }
 };
 app.init = function () {
-    app.main.test();
+    app.main.sliders();
 };
 
 
