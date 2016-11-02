@@ -93,7 +93,7 @@ gulp.task('style-min', function () {
 });
 gulp.task('js', function () {
     return gulp.src([ path.src.js])
-        .pipe(uglify()).on('error', util.log)
+        // .pipe(uglify()).on('error', util.log)
         //.pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream:true }));
