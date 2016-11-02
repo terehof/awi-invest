@@ -594,7 +594,26 @@
                 прибыль с <span>Awi Invest</span>:
             </h2>
             <div class="calculator-profit">
-
+                <div class="calculator-item">
+                    <p class="calculator-item__label">Первоначальный взнос:</p>
+                    <div id="range-1"></div>
+                    <p class="range-result">
+                        <span id="range-1-result">10</span>
+                        млн. р.
+                    </p>
+                </div>
+                <div class="calculator-item">
+                    <p class="calculator-item__label">Срок:</p>
+                    <div id="range-2"></div>
+                    <p class="range-result">
+                        <span id="range-2-result">6</span>
+                        мес.
+                    </p>
+                </div>
+                <div class="calculator-result">
+                    <p>Ваша прибыль составит:</p>
+                    <span class="result" id="calculator-result">16 900 000</span>
+                </div>
             </div>
         </div>
     </section>
@@ -645,13 +664,13 @@
                     <div class="v v2"></div>
                 </div>
                 <div class="slider-nav-item active jsSliderNavItem" data-slide="0">
-                    <span>Строительство <br>дома в центре Сочи</span>
+                    <span><i>Строительство <br>дома в центре Сочи</i></span>
                 </div>
                 <div class="slider-nav-item jsSliderNavItem" data-slide="1">
-                    <span>Сданный ЖК «Бизнес» <br>класса в центре Адлера</span>
+                    <span><i>Сданный ЖК «Бизнес» <br>класса в центре Адлера</i></span>
                 </div>
                 <div class="slider-nav-item jsSliderNavItem" data-slide="2">
-                    <span>ЖК «Бизнес» класса <br>в центре Сочи</span>
+                    <span><i>ЖК «Бизнес» класса <br>в центре Сочи</i></span>
                 </div>
             </div>
             <div class="slide-info">
@@ -757,6 +776,7 @@
 
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
+<script src="js/lib/nouislider.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

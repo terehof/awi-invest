@@ -67,10 +67,58 @@ app.main = {
                 speed: 750
             })
         }
+    },
+    profitCalculator: function () {
+        var range1 = document.getElementById('range-1'),
+            range2 = document.getElementById('range-2');
+
+        function prettyNumber(n) {
+            n += "";
+            n = new Array(4 - n.length % 3).join("U") + n;
+            return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+        }
+
+        noUiSlider.create(range1, {
+            start: 10,
+            connect: [true, false],
+            step: 1,
+            range: {
+                'min': 1,
+                // '50%': 10,
+                'max': 20
+            }
+        });
+        noUiSlider.create(range2, {
+            start: 6,
+            connect: [true, false],
+            step: 1,
+            range: {
+                'min': 1,
+                // '50%': 6,
+                'max': 12
+            }
+        });
+        function calcResult() {
+            var money = range1.noUiSlider.get()*10000,
+                months = range2.noUiSlider.get(),
+                result = Math.round((money*months)*2.81);
+            $('#calculator-result').html(prettyNumber(result));
+        }
+        range1.noUiSlider.on('update', function (values, handle) {
+            var value = values[handle];
+            $('#range-1-result').html(Math.round(value));
+            calcResult();
+        });
+        range2.noUiSlider.on('update', function (values, handle) {
+            var value = values[handle];
+            $('#range-2-result').html(Math.round(value));
+            calcResult();
+        });
     }
 };
 app.init = function () {
     app.main.sliders();
+    app.main.profitCalculator();
 };
 
 

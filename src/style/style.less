@@ -4,6 +4,7 @@
 @import "fonts";
 @import "popups";
 @import "slick";
+@import "nouislider";
 
 html {
     font-size: 10px;
@@ -988,6 +989,11 @@ header {
             -o-transition: color 0.25s ease-in-out;
             transition: color 0.25s ease-in-out;
         }
+        i {
+            display: inline-block;
+            font-style: normal;
+            text-align: left;
+        }
         &:hover {
             span {
                 color: @blue;
@@ -1206,11 +1212,35 @@ header {
     border-radius: 50%;
 }
 .calculator-profit {
-
+    padding: 2rem 0 0;
 }
-
-
-
+.calculator-item {
+    margin: 3rem 0 0;
+    &__label {
+        margin: 0 0 3rem;
+        .fsize(18);
+        font-weight: 700;
+    }
+}
+.range-result {
+    .fsize(18);
+    text-align: center;
+}
+.calculator-result {
+    text-align: center;
+    margin: 4rem 0 0;
+    p {
+        margin: 0;
+        .fsize(18);
+        font-weight: 700;
+    }
+    .result {
+        display: inline-block;
+        color: @blue;
+        .fsize(72);
+        font-weight: 600;
+    }
+}
 
 
 .contacts-items {
