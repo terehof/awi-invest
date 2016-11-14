@@ -919,6 +919,9 @@ header {
     display: inline-block;
     width: 46%;
     margin: 7rem 0 0;
+    &.wide {
+        width: 100%;
+    }
     &:first-child {
         margin-top: 0;
     }
@@ -945,6 +948,7 @@ header {
         color: @blue;
         .fsize(20);
         text-decoration: none;
+        cursor: pointer;
         &:hover {
             text-decoration: underline;
         }
@@ -1238,6 +1242,7 @@ header {
     &__link {
         color: @blue;
         text-decoration: none;
+        cursor: pointer;
         &:hover {
             text-decoration: underline;
         }

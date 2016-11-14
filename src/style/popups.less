@@ -8,7 +8,7 @@
     height: 100%;
     background: #fff;
     .translate(0, 120%);
-    .transition(transform, 1s, ease-in-out);
+    .transition(transform, 1s, cubic-bezier(0.645, 0.045, 0.355, 1));
     &.opened {
         .translate(0, 0);
     }
@@ -22,7 +22,7 @@
     bottom: 5rem;
     left: 5rem;
     .translate(0, -150%);
-    .transition(transform, 1s, ease-in-out);
+    .transition(transform, 1s, cubic-bezier(0.645, 0.045, 0.355, 1));
     &.opened {
         .translate(0, 0);
     }
@@ -278,10 +278,10 @@
 .popup-image {
     position: absolute;
     z-index: 2;
-    width: 22%;
+    width: 30%;
     top: 50%;
     right: 100%;
-    .translate(27%, -50%);
+    .translate(21%, -50%);
     img {
         width: 100%;
     }
@@ -295,6 +295,9 @@
     .translate(0, -50%);
     .fsize(20);
     font-weight: 400;
+    &.wide {
+        width: 75%;
+    }
     p {
         margin: 2rem 0;
         + p {
@@ -322,14 +325,25 @@
         height: 2px;
         background: @blue;
     }
+    .half {
+        display: inline-block;
+        float: left;
+        width: 45%;
+        + .half {
+            margin-left: 10%;
+        }
+    }
     @media (max-width: 1440px) {
-        width: 70%;
-        .fsize(18);
+        width: 75%;
+        &.wide {
+            width: 85%;
+        }
+        .fsize(16);
         .title {
-            .fsize(26);
+            .fsize(24);
         }
         .subtitle {
-            .fsize(26);
+            .fsize(24);
         }
         .decor {
             margin: 2rem 0 2rem;
