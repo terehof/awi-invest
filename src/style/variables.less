@@ -15,3 +15,25 @@
 @title-blue-dark: #3367A6;
 @btn-bg: #4969F8;
 @footer-bg: #5676ff;
+
+@button: #4969F8;
+@buttonHover: #565FFC;
+@buttonEase: ease-in-out;
+
+
+
+
+.transition(@prop: all, @duration: 0.25s, @ease: ease) {
+    -webkit-transition: @prop @duration @ease;
+    -moz-transition: @prop @duration @ease;
+    -ms-transition: @prop @duration @ease;
+    -o-transition: @prop @duration @ease;
+    transition: @prop @duration @ease;
+}
+.translate(@x: 0, @y: 0) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}

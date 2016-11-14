@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>Ави Инвест</title>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,11 +12,11 @@
     <section class="section section-intro">
         <header>
             <div class="container">
-                <a href="/" class="main-logo"><img src="img/awi-logo.png" alt=""></a>
+                <a href="/" class="main-logo showOnScroll" data-animate="fadeInLeftBig"><img src="img/awi-logo.png" alt=""></a>
             </div>
         </header>
         <div class="container">
-            <div class="intro-blocks">
+            <div class="intro-blocks showOnScroll" data-animate="fadeIn">
                 <div class="intro-block">
                     <p class="intro-block__title">ЖК МОСКВА</p>
                     <div class="intro-block__hover intro-hover">
@@ -133,18 +134,28 @@
     </section>
     <section class="section section-strategy">
         <div class="container">
-            <h2 class="section-title decored decored-bottom">НАША <span>СТРАТЕГИЯ</span>  <br>ИНВЕСТИРОВАНИЯ<span class="dark">:</span></h2>
-            <button class="btn btn-strategy">ХОЧУ ИНВЕСТИРОВАТЬ ВЫГОДНО</button>
-            <p class="section-strategy__text">
-                Оптовая покупка высоколиквидных квартир в Сочис дисконтом
+            <h2 class="section-title decored decored-bottom text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    НАША <span>СТРАТЕГИЯ</span>  <br>ИНВЕСТИРОВАНИЯ<span class="dark">:</span>
+                </div>
+            </h2>
+            <button class="btn btn-strategy showOnScroll jsOpenPopup" data-animate="fadeInUp" data-popup="income">ХОЧУ ИНВЕСТИРОВАТЬ ВЫГОДНО</button>
+            <p class="section-strategy__text text-hidden textShowOnScroll">
+                <span class="text-hidden__text">
+                    Оптовая покупка высоколиквидных квартир в Сочис дисконтом
                 до 50% и их срочная розничная продажа и фиксация прибыли в&nbsp;течение 2-3 месяцев.
+                </span>
             </p>
         </div>
     </section>
     <section class="section section-benefits">
         <div class="container">
-            <h2 class="section-title light">ВАШИ ВЫГОДЫ <br>С AWI INVEST:</h2>
-            <div class="benefits-wrap">
+            <h2 class="section-title light text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    ВАШИ ВЫГОДЫ <br>С AWI INVEST:
+                </div>
+            </h2>
+            <div class="benefits-wrap showOnScroll" data-animate="fadeInUp">
                 <div class="benefit-item">
                     <span class="benefit-item__num">01</span>
                     <p class="benefit-item__text">
@@ -179,8 +190,12 @@
     </section>
     <section class="section section-about-us">
         <div class="container">
-            <h2 class="section-title decored decored-right">КТО <span>МЫ</span>?</h2>
-            <div class="team-members">
+            <h2 class="section-title decored decored-right text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    КТО <span>МЫ</span>?
+                </div>
+            </h2>
+            <div class="team-members showOnScroll" data-animate="fadeInUp">
                 <div class="team-member">
                     <img src="img/team-member-1.jpg" alt="" class="team-member__image">
                     <p class="team-member__name">Алексей Дедов</p>
@@ -189,7 +204,7 @@
                         недвижимости Сочи. Создатель
                         и директор компании Nedvex.
                     </p>
-                    <a href="#" class="team-member__link">Читать далее</a>
+                    <span class="team-member__link jsOpenPopup" data-popup="dedov">Читать далее</span>
                     <div class="team-member__decor"></div>
                 </div>
                 <div class="team-member">
@@ -201,47 +216,55 @@
                         анализу рынка  недвижимости в
                         лучшей компании Сочи.
                     </p>
-                    <a href="#" class="team-member__link">Читать далее</a>
-                    <div class="team-member__decor"></div>
+                    <span class="team-member__link jsOpenPopup" data-popup="lebedev">Читать далее</span>
+                    <div class="team-member__decor" data-enllax-ratio="0.4" data-enllax-type="foreground"></div>
                 </div>
             </div>
         </div>
     </section>
     <section class="section section-sochi-benefits">
         <div class="container">
-            <h2 class="section-title decored decored-right-bottom">
-                ЧЕМ СОЧИ <span>ВЫГОДНЕЕ</span> ДРУГИХ <br>
-                РЕГИОНОВ ДЛЯ ИНВЕСТОРА?
+            <h2 class="section-title decored decored-right-bottom text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    ЧЕМ СОЧИ <span>ВЫГОДНЕЕ</span> ДРУГИХ <br>
+                    РЕГИОНОВ ДЛЯ ИНВЕСТОРА?
+                </div>
             </h2>
             <div class="clear"></div>
             <div class="sochi-benefits">
-                <div class="sochi-benefit">
-                    <p class="sochi-benefit__num">01</p>
-                    <p class="sochi-benefit__text">
-                        Постоянный всероссийский рост
-                        спроса при дефиците качественного
-                        предложения;
-                    </p>
+                <div class="sochi-benefit text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <p class="sochi-benefit__num">01</p>
+                        <p class="sochi-benefit__text">
+                            Постоянный всероссийский рост
+                            спроса при дефиците качественного
+                            предложения;
+                        </p>
+                    </div>
                 </div>
-                <div class="sochi-benefit">
-                    <p class="sochi-benefit__num">02</p>
-                    <p class="sochi-benefit__text">
-                        Меньшая доступность банковского
-                        кредитования для застройщиков
-                        заставляетих предлагать больший
-                        дисконт инвесторам;
-                    </p>
+                <div class="sochi-benefit text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <p class="sochi-benefit__num">02</p>
+                        <p class="sochi-benefit__text">
+                            Меньшая доступность банковского
+                            кредитования для застройщиков
+                            заставляетих предлагать больший
+                            дисконт инвесторам;
+                        </p>
+                    </div>
                 </div>
-                <div class="sochi-benefit">
-                    <p class="sochi-benefit__num">03</p>
-                    <p class="sochi-benefit__text">
-                        Высокая ликвидность вложений.
-                    </p>
+                <div class="sochi-benefit text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <p class="sochi-benefit__num">03</p>
+                        <p class="sochi-benefit__text">
+                            Высокая ликвидность вложений.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="sochi-benefit-image">
+            <div class="sochi-benefit-image showOnScroll" data-animate="fadeInUp">
                 <img src="img/sochi-benefits-image.jpg" alt="">
-                <div class="sochi-benefit-decor circle"></div>
+                <div class="sochi-benefit-decor circle" data-enllax-ratio="0.4" data-enllax-type="foreground"></div>
                 <div class="sochi-benefit-decor line"></div>
             </div>
             <div class="clear"></div>
@@ -249,13 +272,16 @@
     </section>
     <section class="section section-reasons">
         <div class="container">
-            <h2 class="section-title">
-                ПОЧЕМУ ЛЮДИ <span>ПОКУПАЮТ</span> <span class="decor"></span> <br>
-                КВАРТИРЫВ СОЧИ НЕСМОТРЯ НА <br>
-                КРИЗИС?
+            <h2 class="section-title text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    ПОЧЕМУ ЛЮДИ <span>ПОКУПАЮТ</span> <span class="decor"></span> <br>
+                    КВАРТИРЫВ СОЧИ НЕСМОТРЯ НА <br>
+                    КРИЗИС?
+                </div>
             </h2>
-            <div class="reasons-wrap">
+            <div class="reasons-wrap showOnScroll" data-animate="fadeInUp">
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">01</span>
                     <p class="reason-item__text">
                         Субтропики в России. <br>
@@ -263,6 +289,7 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">02</span>
                     <p class="reason-item__text">
                         Для отдыха, жизни, <br>
@@ -271,6 +298,7 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">03</span>
                     <p class="reason-item__text">
                         Лучшая курортная <br>
@@ -279,13 +307,15 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">04</span>
                     <p class="reason-item__text">
                         Крупная рекламная <br>
                         компания.
                     </p>
                 </div>
-                <div class="reason-item color-border">
+                <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">05</span>
                     <p class="reason-item__text">
                         Развитие горнолыжного <br>
@@ -298,15 +328,18 @@
     </section>
     <section class="section section-reasons">
         <div class="container">
-            <h2 class="section-title">
-                КАКИЕ ПРИЧИНЫ <span>УВЕЛИЧЕНИЯ</span> <br>
-                ИНВЕСТИЦИОННОГО СПРОСА НА <br>
-                КВАРТИРЫ В СОЧИ? <span class="decor long"></span>
+            <h2 class="section-title text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    КАКИЕ ПРИЧИНЫ <span>УВЕЛИЧЕНИЯ</span> <br>
+                    ИНВЕСТИЦИОННОГО СПРОСА НА <br>
+                    КВАРТИРЫ В СОЧИ? <span class="decor long"></span>
+                </div>
             </h2>
             <div class="reasons-decor line"></div>
-            <div class="reasons-decor circle"></div>
-            <div class="reasons-wrap big">
+            <div class="reasons-decor circle" data-enllax-ratio="0.2" data-enllax-type="foreground"></div>
+            <div class="reasons-wrap big showOnScroll" data-animate="fadeInUp">
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">01</span>
                     <p class="reason-item__text">
                         Сочи инвестиционно- <br>
@@ -315,6 +348,7 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">02</span>
                     <p class="reason-item__text">
                         Сочи – единственный<br>
@@ -325,6 +359,7 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">03</span>
                     <p class="reason-item__text">
                         Спрос в Сочи не<br>
@@ -333,6 +368,7 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">04</span>
                     <p class="reason-item__text">
                         Международная<br>
@@ -341,6 +377,7 @@
                     </p>
                 </div>
                 <div class="reason-item">
+                    <span class="color-border"></span>
                     <span class="reason-item__num">05</span>
                     <p class="reason-item__text">
                         Дальнейшее падение <br>
@@ -351,7 +388,11 @@
         </div>
     </section>
     <section class="section section-slider">
-        <h2 class="section-title light">УСПЕШНЫЕ КЕЙСЫ</h2>
+        <h2 class="section-title light text-hidden absolute textShowOnScroll">
+            <div class="text-hidden__text">
+                УСПЕШНЫЕ КЕЙСЫ
+            </div>
+        </h2>
         <div class="slider-wrap">
             <div class="slider-grid">
                 <div class="h h1"></div>
@@ -367,7 +408,7 @@
             <div class="cases-slider">
                 <div data-title="ЖК Покроский">
                     <img src="img/slide.jpg" alt="">
-                    <div class="slide-title">ЖК Покровский</div>
+                    <div class="slide-title text-hidden absolute textShowOnScroll"><div class="text-hidden__text">ЖК Покровский</div></div>
                 </div>
                 <div data-title="ЖК Идеал Хаус">
                     <img src="img/slide-2.jpg" alt="">
@@ -382,7 +423,7 @@
                     <div class="slide-title">ЖК Москва</div>
                 </div>
             </div>
-            <div class="slider-nav slides-4">
+            <div class="slider-nav slides-4 showOnScroll" data-animate="fadeInUp">
                 <div class="slider-nav-item active jsSliderNavItem" data-slide="0">
                     <span>ЖК ПОКРОВСКИЙ</span>
                 </div>
@@ -396,7 +437,7 @@
                     <span>ЖК МОСКВА</span>
                 </div>
             </div>
-            <div class="slide-info">
+            <div class="slide-info showOnScroll" data-animate="fadeInUp">
                 <div class="slide-info__title"><i></i><span>ЖК ПОКРОВСКИЙ</span></div>
                 <div class="slide-info__benefits">
                     <div class="slide-info__benefit">
@@ -449,9 +490,11 @@
     </section>
     <section class="section section-cooperation">
         <div class="container">
-            <h2 class="section-title">
-                НАШИ ВАРИНАТЫ <span class="decor"></span><br>
-                <span>СОТРУДНИЧЕСТВА:</span>
+            <h2 class="section-title text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    НАШИ ВАРИНАТЫ <span class="decor"></span><br>
+                    <span>СОТРУДНИЧЕСТВА:</span>
+                </div>
             </h2>
             <div class="cooperation-blocks">
                 <div class="cooperation-block">
@@ -464,7 +507,7 @@
                         соинвестором строительства на начальной стадии, вы
                         приобретаете квартиры практически  по себестоимости.
                     </p>
-                    <button class="btn cooperation-block__btn">ХОЧУ&nbsp;ИНВЕСТИРОВАТЬ&nbsp;ВЫГОДНО</button>
+                    <button class="btn cooperation-block__btn jsOpenPopup" data-popup="income">ХОЧУ&nbsp;ИНВЕСТИРОВАТЬ&nbsp;ВЫГОДНО</button>
                 </div>
                 <div class="cooperation-block">
                     <div class="cooperation-block__title">ВАРИАНТ <span>2</span></div>
@@ -479,86 +522,97 @@
                         сумма, тем ниже цена покупки. Объединяя капиталы,
                         увеличиваем вашу прибыль.
                     </p>
-                    <button class="btn cooperation-block__btn">ХОЧУ&nbsp;ИНВЕСТИРОВАТЬ&nbsp;ВЫГОДНО</button>
+                    <button class="btn cooperation-block__btn jsOpenPopup" data-popup="income">ХОЧУ&nbsp;ИНВЕСТИРОВАТЬ&nbsp;ВЫГОДНО</button>
                 </div>
             </div>
         </div>
     </section>
     <section class="section section-faq">
         <div class="container">
-            <h2 class="section-title">FAQ:</h2>
+            <h2 class="section-title text-hidden textShowOnScroll"><div class="text-hidden__text">FAQ:</div></h2>
             <div class="clear"></div>
-            <div class="faq-image image-1">
+            <div class="faq-image image-1 showOnScroll" data-animate="fadeInUp">
                 <img src="img/faq-image.jpg" alt="">
             </div>
             <div class="faq-items">
                 <div class="faq-item">
-                    <div class="faq-item__num">01</div>
-                    <p class="faq-item__title">
-                        Почему «Awi Invest»? Чем мы отличаемся
+                    <div class="faq-item__num text-hidden textShowOnScroll"><span class="text-hidden__text">01</span></div>
+                    <p class="faq-item__title text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">
+                            Почему «Awi Invest»? Чем мы отличаемся
                         от риелторов?
+                        </span>
                     </p>
-                    <p class="faq-item__text">
-                        Риэлторы как продавцы в магазине работают с каталогом
+                    <p class="faq-item__text text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">
+                            Риэлторы как продавцы в магазине работают с каталогом
                         стандартных предложений. Мы - эксперты в недвижимости
                         Сочи и лично ведем отбор объектов для инвестирования.
+                        </span>
                     </p>
-                    <a href="#" class="faq-item__link">Читать далее</a>
+                    <a href="#" class="faq-item__link text-hidden textShowOnScroll"><span class="text-hidden__text">Читать далее</span></a>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-item__num">02</div>
-                    <p class="faq-item__title">
-                        Чем мы лучше риелторов?
+                    <div class="faq-item__num text-hidden textShowOnScroll"><span class="text-hidden__text">02</span></div>
+                    <p class="faq-item__title text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">
+                            Чем мы лучше риелторов?
+                        </span>
                     </p>
-                    <p class="faq-item__text">
-                        Как работают риэлторы: <br>
+                    <p class="faq-item__text text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">
+                            Как работают риэлторы: <br>
                         Риэлторы не умеют выбирать квартиры для инвестирования
                         Риэлтор заинтересован только в продаже и в получении комиссии
+                        </span>
                     </p>
-                    <a href="#" class="faq-item__link">Читать далее</a>
+                    <a href="#" class="faq-item__link text-hidden textShowOnScroll"><span class="text-hidden__text">Читать далее</span></a>
                 </div>
 
-                <div class="faq-image image-2">
+                <div class="faq-image image-2 showOnScroll" data-animate="fadeInUp">
                     <img src="img/faq-image-2.jpg" alt="">
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-item__num">03</div>
-                    <p class="faq-item__title">
-                        Как мы проверяем объекты для
+                    <div class="faq-item__num text-hidden textShowOnScroll"><span class="text-hidden__text">03</span></div>
+                    <p class="faq-item__title text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">
+                            Как мы проверяем объекты для
                         инвестирования?
+                        </span>
                     </p>
-                    <p class="faq-item__text">
-                        Проводим проверку и анализ документов, знаем репутацию застройщиков. Можем спрогнозировать доходность инвестиций в каждый конкретный проект. С нами сотрудничают самые лучшие юристы в городе, работающие в сфере оформления инвестпроектов и ведущих
+                    <p class="faq-item__text text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">Проводим проверку и анализ документов, знаем репутацию застройщиков. Можем спрогнозировать доходность инвестиций в каждый конкретный проект. С нами сотрудничают самые лучшие юристы в городе, работающие в сфере оформления инвестпроектов и ведущих</span>
                     </p>
-                    <a href="#" class="faq-item__link">Читать далее</a>
+                    <a href="#" class="faq-item__link text-hidden textShowOnScroll"><span class="text-hidden__text">Читать далее</span></a>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-item__num">04</div>
-                    <p class="faq-item__title">
-                        По каким критериям мы выбираем
-                        квартиры?
+                    <div class="faq-item__num text-hidden textShowOnScroll"><span class="text-hidden__text">04</span></div>
+                    <p class="faq-item__title text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">По каким критериям мы выбираем квартиры?</span>
                     </p>
-                    <p class="faq-item__text">
-                        Есть три основных фактора ликвидности квартир в Сочи – близости к морю, близости к центру города, площадь квартиры. Ключевое значение также имеет репутация застройщика.
+                    <p class="faq-item__text text-hidden textShowOnScroll">
+                        <span class="text-hidden__text">Есть три основных фактора ликвидности квартир в Сочи – близости к морю, близости к центру города, площадь квартиры. Ключевое значение также имеет репутация застройщика.</span>
                     </p>
-                    <a href="#" class="faq-item__link">Читать далее</a>
+                    <a href="#" class="faq-item__link text-hidden textShowOnScroll"><span class="text-hidden__text">Читать далее</span></a>
                 </div>
             </div>
         </div>
     </section>
     <section class="section section-text">
         <div class="container">
-            <h2 class="section-title decored decored-bottom">Дополнительный <span>CTA</span></h2>
+            <h2 class="section-title decored decored-bottom  text-hidden textShowOnScroll"><div class="text-hidden__text">Дополнительный <span>CTA</span></div></h2>
             <div class="clear"></div>
-            <div class="counter-text">
-                <p>
-                    Получайте первыми предложения о горящих продажах. <br>
-                    Такие предложения не стоят на рынке больше нескольких дней. <br>
-                    Лучшие предложения покупают, кто узнал про них первыми.
-                </p>
+            <div class="counter-text text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    <p>
+                        Получайте первыми предложения о горящих продажах. <br>
+                        Такие предложения не стоят на рынке больше нескольких дней. <br>
+                        Лучшие предложения покупают, кто узнал про них первыми.
+                    </p>
+                </div>
             </div>
-            <div class="button-with-counter">
+            <div class="button-with-counter showOnScroll" data-animate="fadeInUp">
                 <button class="btn btn-counter">Пришлите мне горящие варианты</button>
                 <div class="button-counter">
                     Эту кнопку нажали <span>129</span> раз
@@ -568,12 +622,14 @@
     </section>
     <section class="section section-objections">
         <div class="container">
-            <h2 class="section-title decored decored-bottom">
-                Возражения
+            <h2 class="section-title decored decored-bottom text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    Возражения
+                </div>
             </h2>
-            <div class="objections-decor-1"></div>
-            <div class="objections-decor-2"></div>
-            <div class="objection-item">
+            <div class="objections-decor-1" data-enllax-ratio="0.25" data-enllax-type="foreground"></div>
+            <div class="objections-decor-2" data-enllax-ratio="0.25" data-enllax-type="foreground"></div>
+            <div class="objection-item showOnScroll" data-animate="fadeInUp">
                 <span class="objection-item__num">01</span>
                 <p class="objection-item__title">
                     А если рубль упадет еще больше, может быть хранить средства в валюте?
@@ -589,13 +645,15 @@
     </section>
     <section class="section section-calculator">
         <div class="container">
-            <h2 class="section-title">
-                Расчитайте вашу<br>
-                прибыль с <span>Awi Invest</span>:
+            <h2 class="section-title text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    Расчитайте вашу<br>
+                    прибыль с <span>Awi Invest</span>:
+                </div>
             </h2>
-            <div class="calculator-profit">
+            <div class="calculator-profit" data-start-value="16900000">
                 <div class="calculator-item">
-                    <p class="calculator-item__label">Первоначальный взнос:</p>
+                    <p class="calculator-item__label text-hidden textShowOnScroll"><span class="text-hidden__text">Первоначальный взнос:</span></p>
                     <div id="range-1"></div>
                     <p class="range-result">
                         <span id="range-1-result">10</span>
@@ -603,35 +661,45 @@
                     </p>
                 </div>
                 <div class="calculator-item">
-                    <p class="calculator-item__label">Срок:</p>
+                    <p class="calculator-item__label text-hidden textShowOnScroll"><span class="text-hidden__text">Срок:</span></p>
                     <div id="range-2"></div>
                     <p class="range-result">
                         <span id="range-2-result">6</span>
                         мес.
                     </p>
                 </div>
-                <div class="calculator-result">
-                    <p>Ваша прибыль составит:</p>
-                    <span class="result" id="calculator-result">16 900 000</span>
+                <div class="calculator-result text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <p>Ваша прибыль составит:</p>
+                        <span class="result" id="calculator-result">16 900 000</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="section section-text section-text--reviews">
         <div class="container">
-            <h2 class="section-title decored decored-bottom">
-                Где отзывы наших клиентов <br>
-                с <span>довольными лицами</span> и <br>
-                обычными фамилиями?
+            <h2 class="section-title decored decored-bottom text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    Где отзывы наших клиентов <br>
+                    с <span>довольными лицами</span> и <br>
+                    обычными фамилиями?
+                </div>
             </h2>
-            <p>
-                А вы бы хотели опебликовать на нашем сайте свои личные данные и сведения о доходах? <br>
+            <p class=" text-hidden textShowOnScroll">
+                <span class="text-hidden__text">
+                    А вы бы хотели опебликовать на нашем сайте свои личные данные и сведения о доходах? <br>
                 Вот и другие наши клиенты не хотят, а фейковые отзывы - это не наш уровень.
+                </span>
             </p>
         </div>
     </section>
     <section class="section section-slider">
-        <h2 class="section-title light slide-2-title">Куда вы можете инвестировать <br>вместе с нами?</h2>
+        <h2 class="section-title light slide-2-title text-hidden absolute textShowOnScroll">
+            <div class="text-hidden__text">
+                Куда вы можете инвестировать <br>вместе с нами?
+            </div>
+        </h2>
         <div class="slider-wrap">
             <div class="slider-grid">
                 <div class="h h1"></div>
@@ -647,7 +715,7 @@
             <div class="invest-slider">
                 <div data-title="ЖК Покроский">
                     <img src="img/slide.jpg" alt="">
-                    <div class="slide-title">Строительство <br>дома в центре Сочи</div>
+                    <div class="slide-title text-hidden absolute textShowOnScroll"><div class="text-hidden__text">Строительство <br>дома в центре Сочи</div></div>
                 </div>
                 <div data-title="ЖК Идеал Хаус">
                     <img src="img/slide-2.jpg" alt="">
@@ -658,7 +726,7 @@
                     <div class="slide-title">ЖК «Бизнес» класса <br>в центре Сочи</div>
                 </div>
             </div>
-            <div class="slider-nav slides-3">
+            <div class="slider-nav slides-3 showOnScroll" data-animate="fadeInUp">
                 <div class="slider-nav-grid">
                     <div class="v v1"></div>
                     <div class="v v2"></div>
@@ -673,7 +741,7 @@
                     <span><i>ЖК «Бизнес» класса <br>в центре Сочи</i></span>
                 </div>
             </div>
-            <div class="slide-info">
+            <div class="slide-info showOnScroll" data-animate="fadeInUp">
                 <div class="slide-info__title"><i></i><span>ЖК ПОКРОВСКИЙ</span></div>
                 <div class="slide-info__benefits">
                     <div class="slide-info__benefit">
@@ -725,41 +793,53 @@
     </section>
     <section class="section section-text section-text--change-life">
         <div class="container">
-            <h2 class="section-title">
-                Как <span>изменится</span> ваша <br> жизнь?
+            <h2 class="section-title text-hidden textShowOnScroll">
+                <div class="text-hidden__text">
+                    Как <span>изменится</span> ваша <br> жизнь?
+                </div>
             </h2>
             <div class="clear"></div>
-            <button class="btn btn-change-life">Получить 100% дохода</button>
-            <p>
-                С нами в команде вы сможете легко и быстро покупать
+            <button class="btn btn-change-life showOnScroll jsOpenPopup" data-animate="fadeInUp" data-popup="income">Получить 100% дохода</button>
+            <p class=" text-hidden textShowOnScroll">
+                <span class="text-hidden__text">
+                    С нами в команде вы сможете легко и быстро покупать
                 и продавать квартиры, выходить из проектов и начинать
                 новые. В результате у вас ускорится оборот и доходность
                 ваших инвестиций существенно увеличится.
+                </span>
             </p>
-            <p>
-                С нашей помощью, многие покупатели стали инвесторами
+            <p class=" text-hidden textShowOnScroll">
+                <span class="text-hidden__text">
+                    С нашей помощью, многие покупатели стали инвесторами
                 и это стало их основным бизнесом, а многие инвесторы удвоили
                 и продолжают увеличивать свои капиталы.
+                </span>
             </p>
         </div>
     </section>
     <section class="section section-contacts">
         <div class="container">
-            <h2 class="section-title light">Контакты</h2>
-            <button class="btn btn-contacts">Напишите нам <i></i></button>
+            <h2 class="section-title light text-hidden textShowOnScroll"><div class="text-hidden__text">Контакты</div></h2>
+            <button class="btn btn-contacts showOnScroll jsOpenPopup" data-animate="fadeInUp" data-popup="message">Напишите нам <i></i></button>
             <div class="clear"></div>
             <div class="contacts-items">
-                <div class="contacts-item">
-                    <small>Телефон</small>
+                <div class="contacts-item text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <small>Телефон</small>
                     <a href="tel:+79284567889">+7 (928) 456-78-89</a>
+                    </div>
                 </div>
-                <div class="contacts-item">
-                    <small>Email</small>
+                <div class="contacts-item text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <small>Email</small>
                     <a href="mailto:aviinvest_group@gmail.com">AviInvest_group@gmail.com</a>
+                    </div>
                 </div>
-                <div class="contacts-item">
-                    <small>Адрес</small>
+                <div class="contacts-item text-hidden textShowOnScroll">
+                    <div class="text-hidden__text">
+                        <small>Адрес</small>
                     <address>г. Сочи, ул. Ленина 22</address>
+                    </div>
                 </div>
             </div>
         </div>
@@ -767,16 +847,104 @@
 </div>
 <footer>
     <div class="container">
-        <a href="/" class="footer-logo"><img src="img/awi-logo.png" alt=""></a>
-        <p class="requisites">
-            Реквизиты: ИНН 2320227011 &nbsp;&nbsp; КПП 232001001
+        <a href="/" class="footer-logo showOnScroll" data-animate="fadeInUp" data-offset="20"><img src="img/awi-logo.png" alt=""></a>
+        <p class="requisites text-hidden textShowOnScroll" data-offset="20">
+            <span class="text-hidden__text">
+                Реквизиты: ИНН 2320227011 &nbsp;&nbsp; КПП 232001001
+            </span>
         </p>
     </div>
 </footer>
 
+<div class="popup-bg opened"></div>
+<div class="popup popup-form popup-income">
+    <div class="popup-close jsPopupClose"><i></i><i></i></div>
+    <div class="popup-content">
+        <p class="popup-title">Оставьте свои данные, и мы свяжемся в вами в течении нескольких минут.</p>
+        <form action="#">
+            <div class="input-wrap">
+                <input type="text" name="name" class="input form-control">
+                <label>Имя</label>
+            </div>
+            <div class="input-wrap">
+                <input type="tel" name="phone" class="input form-control">
+                <label>Телефон</label>
+            </div>
+            <button class="popup-form-btn form-control"><span>Заказать звонок</span> <i></i></button>
+        </form>
+    </div>
+</div>
+<div class="popup popup-form popup-message">
+    <div class="popup-close jsPopupClose"><i></i><i></i></div>
+    <div class="popup-content">
+        <p class="popup-title">Оставьте свои данные, и мы свяжемся в вами в течении нескольких минут.</p>
+        <div class="form-wrap">
+            <form action="#">
+                <div class="input-wrap">
+                    <input type="text" name="name" class="input form-control">
+                    <label>Имя</label>
+                </div>
+                <div class="input-wrap mr0">
+                    <input type="tel" name="phone" class="input form-control">
+                    <label>Телефон</label>
+                </div>
+                <div class="clear"></div>
+                <div class="input-wrap textarea">
+                    <textarea name="message" cols="30" rows="7" class="form-control textarea"></textarea>
+                    <label>Сообщение</label>
+                </div>
+                <button class="popup-form-btn form-control"><span>Заказать звонок</span> <i></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="popup popup-text popup-dedov">
+    <div class="popup-close jsPopupClose"><i></i><i></i></div>
+    <div class="popup-content">
+        <div class="popup-image">
+            <img src="img/popup-dedov.jpg" alt="">
+        </div>
+        <div class="popup-content__text">
+            <p class="title">АЛЕКСЕЙ ДЕДОВ</p>
+            <p class="subtitle">эксперт высокого уровня</p>
+            <span class="decor"></span>
+            <p>
+                Настоящий эксперт рынка недвижимости Сочи. Создатель и директор компании Nedvex. За более 6 лет работы неоднократно подтвердил свою репутацию эксперта в области инвестиций. Несколько раз признавался лучшим агентом года в сильнейшем Сочинском агентстве. Досконально разбирается во всех сегментах рынка, от эконом до элитного. Совершил более 150 инвестиционных сделок на сумму более 1,2 миллиарда рублей.
+            </p>
+            <p>
+                Владеет оперативной информацией об акциях и скидках напрямую от застройщиков, подрядчиков, инвесторов и собственников. Ведет переговоры с застройщиками до последнего, чувствуя когда можно сбить цену до минимума. Обладает железной выдержкой и холодным рассудком.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup-text popup-lebedev opened">
+    <div class="popup-close jsPopupClose"><i></i><i></i></div>
+    <div class="popup-content">
+        <div class="popup-image">
+            <img src="img/popup-lebedev.jpg" alt="">
+        </div>
+        <div class="popup-content__text">
+            <p class="title">БОРИС ЛЕБЕДЕВ</p>
+            <p class="subtitle">эксперт высокого уровня</p>
+            <span class="decor"></span>
+            <p>
+                С 2007 по 2015 года работал в должности зам. директора по анализу рынка недвижимости в лучшей компании Сочи. В период олимпийского строительства в Сочи заказчиками моих отчетов стали крупнейшие девелоперы России и международные консультанты. «Jones Lang Lasalle»,  «Ernst & Young», «Cushman & Wakefield Russia», «HALS Девелопмент», «MR Group», ГК «ОПИН», ПГ «Базовый элемент», Корпорация «Инжтрансстрой», Параллельно я активно занимался инвестированием собственных средств в разные сегменты жилой недвижимости Сочи.
+            </p>
+            <p>
+                Теперь мы с Алексеем объединили свои усилия на работе с инвесторами в компании Nedvex. Наработав большой практический опыт и имея навыки по систематизации информации, мы имеем силы и понимание как максимально выгодно инвестировать свои средства и средства наших инвесторов. Если вы искали экспертов, то я вас поздравляю - вы их нашли!
+            </p>
+        </div>
+    </div>
+</div>
+
+
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
+<script src="js/lib/jquery.animateNumber.js"></script>
 <script src="js/lib/nouislider.min.js"></script>
+<script src="js/lib/jquery.enllax.min.js"></script>
+<script src="js/lib/viewportchecker.js"></script>
+<script src="js/lib/ScrollMagic.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

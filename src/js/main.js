@@ -102,7 +102,12 @@ app.main = {
             var money = range1.noUiSlider.get()*10000,
                 months = range2.noUiSlider.get(),
                 result = Math.round((money*months)*2.81);
-            $('#calculator-result').html(prettyNumber(result));
+            var separator_space = $.animateNumber.numberStepFactories.separator(' ');
+            $('#calculator-result').stop().animateNumber({
+                separator: ' ',
+                number: result,
+                numberStep: separator_space
+            }, 750);
         }
         range1.noUiSlider.on('update', function (values, handle) {
             var value = values[handle];
@@ -116,9 +121,108 @@ app.main = {
         });
     }
 };
+app.animations = {
+    showOnScroll: function () {
+        if ($(window).width() > 960) {
+            $('.showOnScroll').each(function (i, item) {
+                var animClass = $(item).attr('data-animate'),
+                    offset = +$(item).attr('data-offset');
+                $(item).viewportChecker({
+                    classToAdd: 'visible animated ' + animClass,
+                    offset: ((!offset) ? 100 : offset)
+                });
+            });
+            $('.textShowOnScroll').each(function (i, item) {
+                var offset = +$(item).attr('data-offset');
+                $(item).viewportChecker({
+                    classToAdd: 'text-visible',
+                    offset: ((!offset) ? 170 : offset)
+                });
+            });
+        } else {
+            $('.showOnScroll').css('opacity', 1);
+        }
+
+        setTimeout(function () {
+            $('.intro-block').addClass('can-hover');
+        }, 1500);
+    },
+    showCalc: function () {
+        var $calculator = $('.calculator-profit'),
+            startValue = $calculator.attr('data-start-value');
+
+        var separator_space = $.animateNumber.numberStepFactories.separator(' ');
+        $('.calculator-profit').viewportChecker({
+            callbackFunction: function (el) {
+                $('#calculator-result').animateNumber({
+                    separator: ' ',
+                    number: startValue,
+                    numberStep: separator_space
+                }, 5000);
+            }
+        });
+
+        $('.noUi-target').viewportChecker({
+            classToAdd: 'showRange'
+        })
+    },
+    cooperationBlocks: function () {
+        $('.cooperation-blocks').viewportChecker({
+            classToAdd: 'showBlocks'
+        })
+    },
+    enllax: function () {
+        $(window).enllax();
+    },
+    placeholders: function () {
+        var $input = $('.input, .textarea');
+        if ($input.length > 0) {
+            $input.each(function (i, item) {
+                $(item).on('blur', function () {
+                    if ($(this).val().length > 0) {
+                        $(item).addClass('not-empty');
+                    } else {
+                        $(item).removeClass('not-empty');
+                    }
+                });
+            });
+        }
+    }
+};
+app.popups = {
+    init: function () {
+        var self = this;
+        $('.jsOpenPopup').on('click', function () {
+            var $this = $(this),
+                popup = $this.attr('data-popup');
+            self.popupOpen(popup);
+        });
+        $('.jsPopupClose').on('click', function () {
+            var $self = $(this),
+                $popupBg = $('.popup-bg'),
+                $popup = $self.closest('.popup');
+            $popupBg.removeClass('opened');
+            $popup.removeClass('opened');
+        });
+    },
+    popupOpen: function (popupName) {
+        var $popupBg = $('.popup-bg'),
+            $popup = $('.popup.popup-'+ popupName);
+        $popupBg.addClass('opened');
+        $popup.addClass('opened');
+    }
+};
+
+
 app.init = function () {
     app.main.sliders();
     app.main.profitCalculator();
+    app.popups.init();
+    app.animations.showOnScroll();
+    app.animations.showCalc();
+    app.animations.cooperationBlocks();
+    app.animations.enllax();
+    app.animations.placeholders();
 };
 
 
