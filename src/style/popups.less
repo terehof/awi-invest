@@ -110,6 +110,9 @@
     padding: 0 2.5rem;
     background: @blue;
     outline: none;
+    &.error {
+        border-color: red;
+    }
     @media (max-width: 1440px) {
         width: 32rem;
         height: 5.6rem;
@@ -177,6 +180,14 @@
         transform: translate(0, -50%);
         -webkit-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out;
+        &.error {
+            .fsize(12) !important;
+            color: red;
+            left: 0 !important;
+            top: 100% !important;
+            -webkit-transform: none !important;
+            transform: none !important;
+        }
     }
 }
 .input {
@@ -348,5 +359,16 @@
         .decor {
             margin: 2rem 0 2rem;
         }
+    }
+}
+
+.form-message {
+    text-align: center;
+    color: #fff;
+    &.success {
+        color: #fff;
+    }
+    &.error {
+        color: red;
     }
 }

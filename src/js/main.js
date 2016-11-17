@@ -17,13 +17,33 @@ app.main = {
             });
             $casesSlider.on('beforeChange', function (slick, currSlide, nextSlide) {
                 var $slideInfo = $casesSlider.siblings('.slide-info'),
-                    $slideInfoTitle = $slideInfo.find('.slide-info__title span');
+                    $slideInfoTitle = $slideInfo.find('.slide-info__title span'),
+                    $pricePurchase = $slideInfo.find('.jsPricePurchase'),
+                    $investPeriod = $slideInfo.find('.jsInvestPeriod'),
+                    $priceSelling = $slideInfo.find('.jsPriceSelling'),
+                    $revenueMeter = $slideInfo.find('.jsRevenueMeter'),
+                    $profitAll = $slideInfo.find('.jsProfitAll'),
+                    $profitMonth = $slideInfo.find('.jsProfitMonth');
 
 
                 setTimeout(function () {
-                    var title = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-title');
+                    var title = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-title'),
+                        pricePurchase = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-price-purchase'),
+                        investPeriod = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-invest-period'),
+                        priceSelling = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-price-selling'),
+                        revenueMeter = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-revenue-meter'),
+                        profitAll = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-profit-all'),
+                        profitMonth = $casesSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-profit-month');
                     $slideInfoTitle.html(title);
+                    $pricePurchase.html(pricePurchase);
+                    $investPeriod.html(investPeriod);
+                    $priceSelling.html(priceSelling);
+                    $revenueMeter.html(revenueMeter);
+                    $profitAll.html(profitAll);
+                    $profitMonth.html(profitMonth);
+
                     $casesSlider.next('.slider-nav').find('.jsSliderNavItem').removeClass('active').eq(currSlide.currentSlide).addClass('active');
+
                 }, 100);
 
             });
@@ -54,8 +74,8 @@ app.main = {
                     $slideInfoTitle = $slideInfo.find('.slide-info__title span');
 
                 setTimeout(function () {
-                    var title = $investSlider.find('.slick-slide[data-slick-index="'+ currSlide.currentSlide +'"]').attr('data-title');
-                    $slideInfoTitle.html(title);
+                    $investSlider.siblings('.slide-info').fadeOut().removeClass('showOnScroll animated fadeInUp');
+                    $investSlider.siblings('.slide-info-'+ (currSlide.currentSlide+1)).fadeIn();
                     $investSlider.next('.slider-nav').find('.jsSliderNavItem').removeClass('active').eq(currSlide.currentSlide).addClass('active');
                 }, 100);
 
@@ -203,6 +223,7 @@ app.popups = {
                 $popup = $self.closest('.popup');
             $popupBg.removeClass('opened');
             $popup.removeClass('opened');
+            $popup.find('.form-message').slideUp();
         });
     },
     popupOpen: function (popupName) {
@@ -212,12 +233,109 @@ app.popups = {
         $popup.addClass('opened');
     }
 };
+app.forms = {
+    init: function () {
+        var $formMessage = $('#form-message');
+        if ($formMessage.length > 0) {
+            $formMessage.validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    phone: {
+                        required: true,
+                        phoneRU: true
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                messages: {
+                    name: {
+                        required: 'Укажите как к Вам обращаться'
+                    },
+                    phone: {
+                        required: 'Укажите Ваш телефон'
+                    },
+                    message: {
+                        required: 'Напишите Ваше сообщение'
+                    }
+                },
+                submitHandler: function(form) {
+                    var $form = $(form);
+                    $.ajax({
+                        type: "POST",
+                        url: "mail-message.php",
+                        data: $form.serialize()
+                    }).done(function(e) {
+                        setTimeout(function() {
+                            $form.find('.form-message').html('Спасибо! Мы скоро свяжемся с Вами').addClass('success').slideDown();
+                            $form.trigger("reset");
+                            $form.find('input, textarea').removeClass('not-empty');
+                        }, 1000)
+                    }).fail(function (e) {
+                        $form.find('.form-message').html('Произошла ошибка. Попробуйте позже').slideDown();
+                        $form.trigger('reset');
+                        $form.find('input, textarea').removeClass('not-empty');
+                    })
+                }
+            });
+        }
+        var $formCallback = $('#form-callback');
+        if ($formCallback.length > 0) {
+            $formCallback.validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    phone: {
+                        required: true,
+                        phoneRU: true
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                messages: {
+                    name: {
+                        required: 'Укажите как к Вам обращаться'
+                    },
+                    phone: {
+                        required: 'Укажите Ваш телефон'
+                    },
+                    message: {
+                        required: 'Напишите Ваше сообщение'
+                    }
+                },
+                submitHandler: function(form) {
+                    var $form = $(form);
+                    $.ajax({
+                        type: "POST",
+                        url: "mail-callback.php",
+                        data: $form.serialize()
+                    }).done(function(e) {
+                        setTimeout(function() {
+                            $form.find('.form-message').html('Спасибо! Мы скоро свяжемся с Вами').addClass('success').slideDown();
+                            $form.trigger("reset");
+                            $form.find('input, textarea').removeClass('not-empty');
+                        }, 1000)
+                    }).fail(function (e) {
+                        $form.find('.form-message').html('Произошла ошибка. Попробуйте позже').slideDown();
+                        $form.trigger('reset');
+                        $form.find('input, textarea').removeClass('not-empty');
+                    })
+                }
+            });
+        }
+    }
+};
 
 
 app.init = function () {
     app.main.sliders();
     app.main.profitCalculator();
     app.popups.init();
+    app.forms.init();
     app.animations.showOnScroll();
     app.animations.showCalc();
     app.animations.cooperationBlocks();

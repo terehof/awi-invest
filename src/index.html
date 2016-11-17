@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">-->
     <title>Ави Инвест</title>
     <link href="img/favicon.png" rel="shortcut icon" type="image/png" />
     <link rel="stylesheet" href="css/style.css">
@@ -406,19 +406,19 @@
                 <div class="v v4"></div>
             </div>
             <div class="cases-slider">
-                <div data-title="ЖК Покроский">
+                <div data-title="ЖК Покроский" data-total-area="500" data-price-purchase="50 000" data-invest-period="3" data-price-selling="70 000" data-revenue-meter="20 000" data-profit-all="40" data-profit-month="13">
                     <img src="img/slide.jpg" alt="">
                     <div class="slide-title text-hidden absolute textShowOnScroll"><div class="text-hidden__text">ЖК Покровский</div></div>
                 </div>
-                <div data-title="ЖК Идеал Хаус">
+                <div data-title="ЖК Идеал Хаус" data-total-area="500" data-price-purchase="50 000" data-invest-period="3" data-price-selling="70 000" data-revenue-meter="20 000" data-profit-all="40" data-profit-month="13">
                     <img src="img/slide-2.jpg" alt="">
                     <div class="slide-title">ЖК Идеал Хаус</div>
                 </div>
-                <div data-title="ЖК Виктория">
+                <div data-title="ЖК Виктория" data-total-area="500" data-price-purchase="50 000" data-invest-period="3" data-price-selling="70 000" data-revenue-meter="20 000" data-profit-all="40" data-profit-month="13">
                     <img src="img/slide.jpg" alt="">
                     <div class="slide-title">ЖК Виктория</div>
                 </div>
-                <div data-title="ЖК Москва">
+                <div data-title="ЖК Москва" data-total-area="1 000" data-price-purchase="45 000" data-invest-period="2" data-price-selling="55 000" data-revenue-meter="10 000" data-profit-all="22" data-profit-month="11">
                     <img src="img/slide-2.jpg" alt="">
                     <div class="slide-title">ЖК Москва</div>
                 </div>
@@ -442,44 +442,44 @@
                 <div class="slide-info__benefits">
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>500</strong>
+                            <strong class="jsTotalArea">500</strong>
                             <small>Общая проданная <br>
                                 площадь, кв.м.
                             </small>
                         </div>
                         <div class="right text-right">
-                            <strong>50000</strong>
+                            <strong class="jsPricePurchase">50 000</strong>
                             <small>Цена покупки, <span>руб./кв.м.</span>
                             </small>
                         </div>
                     </div>
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>3</strong>
+                            <strong class="jsInvestPeriod">3</strong>
                             <small>Срок инвестирования, мес.
                             </small>
                         </div>
                         <div class="right text-right">
-                            <strong>70</strong>
+                            <strong class="jsPriceSelling">70 000</strong>
                             <small>Цена продажи, руб
                             </small>
                         </div>
                     </div>
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>13 <i class="icon-arrow-up"></i></strong>
+                            <strong><span class="jsProfitMonth">13</span> <i class="icon-arrow-up"></i></strong>
                             <small>Прибыльность, <span>в мес, %</span>
                             </small>
                         </div>
                         <div class="right text-right">
-                            <strong>40 <i class="icon-arrow-up"></i></strong>
+                            <strong><span class="jsProfitAll">40</span> <i class="icon-arrow-up"></i></strong>
                             <small>Прибыльность всего, %
                             </small>
                         </div>
                     </div>
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>70</strong>
+                            <strong class="jsRevenueMeter">20 000</strong>
                             <small>Доход с кв.м., руб.
                             </small>
                         </div>
@@ -623,10 +623,10 @@
                 </div>
             </div>
             <div class="button-with-counter showOnScroll" data-animate="fadeInUp">
-                <button class="btn btn-counter">Пришлите мне горящие варианты</button>
-                <div class="button-counter">
-                    Эту кнопку нажали <span>129</span> раз
-                </div>
+                <button class="btn btn-counter jsOpenPopup" data-popup="income">Пришлите мне горящие варианты</button>
+                <!--<div class="button-counter">-->
+                    <!--Эту кнопку нажали <span>129</span> раз-->
+                <!--</div>-->
             </div>
         </div>
     </section>
@@ -723,15 +723,15 @@
                 <div class="v v4"></div>
             </div>
             <div class="invest-slider">
-                <div data-title="ЖК Покроский">
+                <div data-title="Дом в центре Сочи">
                     <img src="img/slide.jpg" alt="">
                     <div class="slide-title text-hidden absolute textShowOnScroll"><div class="text-hidden__text">Строительство <br>дома в центре Сочи</div></div>
                 </div>
-                <div data-title="ЖК Идеал Хаус">
+                <div data-title="Сданный ЖК «Бизнес» класса">
                     <img src="img/slide-2.jpg" alt="">
                     <div class="slide-title">Сданный ЖК «Бизнес» <br>класса в центре Адлера</div>
                 </div>
-                <div data-title="ЖК Виктория">
+                <div data-title="ЖК «Бизнес» класса">
                     <img src="img/slide.jpg" alt="">
                     <div class="slide-title">ЖК «Бизнес» класса <br>в центре Сочи</div>
                 </div>
@@ -751,13 +751,102 @@
                     <span><i>ЖК «Бизнес» класса <br>в центре Сочи</i></span>
                 </div>
             </div>
-            <div class="slide-info showOnScroll" data-animate="fadeInUp">
-                <div class="slide-info__title"><i></i><span>ЖК ПОКРОВСКИЙ</span></div>
+            <div class="slide-info slide-info-1  showOnScroll" data-animate="fadeInUp">
+                <div class="slide-info__title"><i></i><span>Дом в центре Сочи</span></div>
+                <div class="slide-info__benefits">
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>Около <br>50 млн. руб.</strong>
+                            <small>финансирование <br>строительства своими средствами
+                            </small>
+                        </div>
+                        <div class="right text-right">
+                            <strong>Есть</strong>
+                            <small>разрешение <br>на строительство
+                            </small>
+                        </div>
+                    </div>
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>Дальнейшее </strong>
+                            <small>финансирование за счет продажи
+                            </small>
+                        </div>
+                    </div>
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>20</strong>
+                            <small>Доходность, <span>%/год</span>
+                            </small>
+                        </div>
+                        <div class="right text-right">
+                            <strong>240</strong>
+                            <small>Доходность, <span>%/месяц</span>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-info slide-info-2" style="display: none;">
+                <div class="slide-info__title"><i></i><span>Сданный ЖК «Бизнес» класса</span></div>
+                <div class="slide-info__benefits">
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>от 30</strong>
+                            <small>Площадь квартир, <span>кв.м.</span>
+                            </small>
+                        </div>
+                        <div class="right text-right">
+                            <strong>85 000</strong>
+                            <small>Цена застройщика, <span>руб. / кв.м.</span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>65 000</strong>
+                            <small>Наша цена, <span>руб. / кв.м.</span>
+                            </small>
+                        </div>
+                        <div class="right text-right">
+                            <strong>100 000</strong>
+                            <small>Цена при продаже, <span>руб. / кв.м.</span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>55%</strong>
+                            <small>Доход за три месяца
+                            </small>
+                        </div>
+                        <div class="right text-right">
+                            <strong>18%</strong>
+                            <small>Доход в месяц
+                            </small>
+                        </div>
+                    </div>
+                    <div class="slide-info__benefit">
+                        <div class="left">
+                            <strong>65 000</strong>
+                            <small>Продажная цена
+                            </small>
+                        </div>
+                        <div class="right text-right">
+                            <strong>9 000</strong>
+                            <small>Общий предлагаемый объем <span>кв.м.</span>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-info slide-info-3" style="display: none;">
+                <div class="slide-info__title"><i></i><span>ЖК «Бизнес» класса</span></div>
                 <div class="slide-info__benefits">
                     <div class="slide-info__benefit">
                         <div class="left">
                             <strong>5</strong>
-                            <small>Минут до моря
+                            <small>Минут до моря, <br>вид на море
                             </small>
                         </div>
                         <div class="right text-right">
@@ -768,32 +857,32 @@
                     </div>
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>100000</strong>
+                            <strong>100 000</strong>
                             <small>Цена застройщика, <span>р/кв.м</span>
                             </small>
                         </div>
                         <div class="right text-right">
-                            <strong>63000</strong>
+                            <strong>63 000</strong>
                             <small>Наша цена, <span>р/кв.м</span>
                             </small>
                         </div>
                     </div>
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>80000</strong>
+                            <strong>80 000</strong>
                             <small>Перепродадим к новому году, <span>р/кв.м</span>
                             </small>
                         </div>
                         <div class="right text-right">
                             <strong>27</strong>
-                            <small>Доходность, %
+                            <small>Доходность, <span>%/мес</span>
                             </small>
                         </div>
                     </div>
                     <div class="slide-info__benefit">
                         <div class="left">
-                            <strong>70</strong>
-                            <small>Доход с кв.м., руб.
+                            <strong>40 000</strong>
+                            <small>Наша цена <span>руб/кв.м</span>
                             </small>
                         </div>
                     </div>
@@ -871,7 +960,7 @@
     <div class="popup-close jsPopupClose"><i></i><i></i></div>
     <div class="popup-content">
         <p class="popup-title">Оставьте свои данные, и мы свяжемся в вами в течении нескольких минут.</p>
-        <form action="#">
+        <form action="#" id="form-callback">
             <div class="input-wrap">
                 <input type="text" name="name" class="input form-control">
                 <label>Имя</label>
@@ -881,6 +970,7 @@
                 <label>Телефон</label>
             </div>
             <button class="popup-form-btn form-control"><span>Заказать звонок</span> <i></i></button>
+            <p class="form-message"></p>
         </form>
     </div>
 </div>
@@ -889,7 +979,7 @@
     <div class="popup-content">
         <p class="popup-title">Оставьте свои данные, и мы свяжемся в вами в течении нескольких минут.</p>
         <div class="form-wrap">
-            <form action="#">
+            <form action="#" id="form-message">
                 <div class="input-wrap">
                     <input type="text" name="name" class="input form-control">
                     <label>Имя</label>
@@ -903,7 +993,8 @@
                     <textarea name="message" cols="30" rows="7" class="form-control textarea"></textarea>
                     <label>Сообщение</label>
                 </div>
-                <button class="popup-form-btn form-control"><span>Заказать звонок</span> <i></i></button>
+                <button class="popup-form-btn form-control"><span>Отправить</span> <i></i></button>
+                <p class="form-message"></p>
             </form>
         </div>
     </div>
@@ -1093,12 +1184,12 @@
 
 
 <script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.validate.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
 <script src="js/lib/jquery.animateNumber.js"></script>
 <script src="js/lib/nouislider.min.js"></script>
 <script src="js/lib/jquery.enllax.min.js"></script>
 <script src="js/lib/viewportchecker.js"></script>
-<script src="js/lib/ScrollMagic.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
