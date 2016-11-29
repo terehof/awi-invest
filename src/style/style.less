@@ -30,7 +30,7 @@ body {
 
 }
 .section-intro {
-    background: url(../img/intro-bg.jpg) center/cover no-repeat;
+
 }
 .section-strategy {
     padding: 13.6rem 0 9.8rem;
@@ -112,11 +112,16 @@ body {
         font-weight: 400;
     }
 }
-
+.section-where-invest {
+    .section-title {
+        margin: 0 0 2rem;
+    }
+}
 
 
 .main-logo {
     display: inline-block;
+    margin: 0 0 0 6rem;
     width: 11.3rem;
     text-decoration: none;
     img {
@@ -126,11 +131,15 @@ body {
 }
 header {
     position: absolute;
+    z-index: 1;
     top: 3rem;
     left: 0;
     width: 100%;
 }
-.intro-blocks {
+.invest-blocks-wrap {
+    position: relative;
+}
+.invest-blocks {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -151,7 +160,7 @@ header {
         transform: translate(-50%, 0);
     }
 }
-.intro-block {
+.invest-block {
     position: relative;
     width: 50%;
     height: 35rem;
@@ -190,10 +199,10 @@ header {
             right: 100%;
             background: fade(#fff, 25%);
         }
-        .intro-hover__num {
+        .invest-hover__num {
             left: 0;
         }
-        .intro-hover__benefits {
+        .invest-hover__benefits {
             left: 0;
             right: 2.2rem;
         }
@@ -213,13 +222,13 @@ header {
             left: 100%;
             background: fade(#fff, 25%);
         }
-        .intro-hover__num {
+        .invest-hover__num {
             left: 6rem;
         }
-        .intro-block__title {
+        .invest-block__title {
             right: 0;
         }
-        .intro-hover__benefits {
+        .invest-hover__benefits {
             left: 6rem;
             right: 0;
         }
@@ -239,10 +248,10 @@ header {
             right: 100%;
             background: fade(#fff, 25%);
         }
-        .intro-hover__num {
+        .invest-hover__num {
             left: 0;
         }
-        .intro-hover__benefits {
+        .invest-hover__benefits {
             left: 0;
             right: 2.2rem;
         }
@@ -262,13 +271,13 @@ header {
             left: 100%;
             background: fade(#fff, 25%);
         }
-        .intro-block__title {
+        .invest-block__title {
             right: 0;
         }
-        .intro-hover__num {
+        .invest-hover__num {
             left: 6rem;
         }
-        .intro-hover__benefits {
+        .invest-hover__benefits {
             left: 6rem;
             right: 0;
         }
@@ -298,27 +307,23 @@ header {
             &:before {
                 background: @blue;
             }
-            .intro-block__hover {
+            .invest-block__hover {
                 opacity: 1;
             }
         }
     }
 }
-.intro-block__hover {
+.invest-block__hover {
     position: absolute;
     opacity: 0;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -ms-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    .transition(opacity, 0.3s, ease-in-out);
     will-change: opacity;
 }
-.intro-hover {
+.invest-hover {
     pointer-events: none;
     &__num {
         position: absolute;
@@ -367,6 +372,45 @@ header {
     }
 
 
+}
+.invest-blocks-bg {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .bg-default {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/invest-blocks/invest-bg.jpg) center center / cover no-repeat;
+    }
+    .bg {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        .transition(opacity, 0.3s, ease-in-out);
+        will-change: opacity;
+        &.bg-1 {
+            background: url(../img/invest-blocks/invest-bg-moscow.jpg) center center / cover no-repeat;
+        }
+        &.bg-2 {
+            background: url(../img/invest-blocks/invest-bg-pokrovski.jpg) center center / cover no-repeat;
+        }
+        &.bg-3 {
+            background: url(../img/invest-blocks/invest-bg-ideal_house.jpg) center center / cover no-repeat;
+        }
+        &.bg-4 {
+            background: url(../img/invest-blocks/invest-bg-viktoriya.jpg) center center / cover no-repeat;
+        }
+    }
 }
 .section-title {
     display: inline-block;
@@ -1391,3 +1435,149 @@ footer {
 }
 
 
+.intro-slider-wrap {
+    position: relative;
+    .slider-grid {
+        .h {
+            &.h1 {
+                top: 25%;
+            }
+            &.h2 {
+                top: 50%;
+            }
+            &.h3 {
+                top: 75%;
+            }
+        }
+        .v {
+            &.v1 {
+                left: 25%;
+            }
+            &.v2 {
+                left: 50%;
+            }
+            &.v3 {
+                left: 75%;
+            }
+        }
+    }
+    .decor {
+        position: absolute;
+        z-index: 1;
+        width: 1.7rem;
+        height: 3.1rem;
+        bottom: 0;
+        display: inline-block;
+        opacity: 0.26;
+        background: #fff;
+        margin-left: 1px;
+        @media (max-width: 1440px) {
+            width: 1.4rem;
+            height: 2.5rem;
+        }
+    }
+    .decor-1 {
+        left: 25%;
+    }
+    .decor-2 {
+        left: 75%;
+    }
+}
+.intro-slider {
+    .slick-dots {
+        bottom: 6.9rem;
+        @media (max-width: 1366px) {
+            bottom: 3.5rem;
+        }
+        li {
+            width: auto;
+            height: auto;
+            padding: 0.5rem 0;
+            &.slick-active {
+                button {
+                    background: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+        button {
+            &:before {
+                display: none;
+            }
+            border: none;
+            padding: 0;
+            height: 0.4rem;
+            width: 4.3rem;
+            margin: 0 1.8rem;
+            background: rgba(255, 255, 255, 0.3);
+            transition: baclground 0.25s ease;
+            @media (max-width: 1366px) {
+                height: 0.3rem;
+                width: 4rem;
+                margin: 0 1.5rem;
+            }
+        }
+    }
+}
+.to-bottom-link {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 8rem;
+    bottom: 5.5rem;
+    border-left: 2px solid #fff;
+    height: 4.3rem;
+    line-height: 4.3rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 0 1rem 0 3.3rem;
+    color: #fff;
+    cursor: pointer;
+    .transition(all, 0.25s, ease-in-out);
+    span {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+    }
+    &:hover {
+        padding: 0 1rem 0 1.8rem;
+    }
+    @media (max-width: 1366px) {
+        left: 5rem;
+        bottom: 3.5rem;
+    }
+}
+.info-slider-titles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.info-slider-title {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 8rem;
+    .translate(0, -50%);
+    font-weight: 700;
+    .fsize(80);
+    color: #fff;
+    line-height: 1.1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.9s ease-in-out;
+    will-change: opacity;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    @media (max-width: 1440px) {
+        .fsize(60);
+        left: 6rem;
+    }
+    @media (max-width: 1366px) {
+        .fsize(56);
+    }
+}

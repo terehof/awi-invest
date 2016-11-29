@@ -1,6 +1,25 @@
 var app = app || {};
 app.main = {
     sliders: function () {
+        var $introSlider = $('.intro-slider');
+        if ($introSlider.length > 0) {
+            var $slideTitles = $('.info-slider-title');
+            $introSlider.on('beforeChange', function (event, slick, currSlide, nextSlide) {
+                $slideTitles.removeClass('active').eq(nextSlide).addClass('active');
+            });
+            $introSlider.slick({
+                prevArrow: '',
+                nextArrow: '',
+                fade: false,
+                speed: 1000,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                infinite: true,
+                pauseOnHover: false
+            })
+        }
+
         var $casesSlider = $('.cases-slider');
         if ($casesSlider.length > 0) {
             $casesSlider.on('init', function () {
@@ -88,6 +107,16 @@ app.main = {
             })
         }
     },
+    scrollBottom: function () {
+        var $scrollBottomLink = $('.to-bottom-link');
+        if ($scrollBottomLink.length > 0) {
+            $scrollBottomLink.on('click', function () {
+                var destination = $('.section-strategy').offset().top;
+                $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1000);
+                return false;
+            })
+        }
+    },
     profitCalculator: function () {
         var range1 = document.getElementById('range-1'),
             range2 = document.getElementById('range-2');
@@ -139,6 +168,42 @@ app.main = {
             $('#range-2-result').html(Math.round(value));
             calcResult();
         });
+    },
+    investBlocks: function () {
+        var $investBlocksWrap = $('.invest-blocks-wrap');
+        if ($investBlocksWrap.length > 0) {
+            setTimeout(function () {
+                $('.invest-block').addClass('can-hover');
+            }, 1500);
+
+            var $investBlock = $investBlocksWrap.find('.invest-block'),
+                $bgBlocks = $investBlocksWrap.find('.bg');
+            $investBlock.hover(
+                function () {
+                    var $this = $(this),
+                        $bgBlock = $bgBlocks.eq($this.index());
+
+                    $bgBlock.css({
+                        'z-index': 1,
+                        opacity: 1
+                    });
+                },
+                function () {
+                    var $this = $(this),
+                        $bgBlock = $bgBlocks.eq($this.index());
+
+                    $bgBlock.css({
+                        'z-index': 0
+                    });
+                    setTimeout(function () {
+                        $bgBlock.css({
+                            opacity: 0
+                        });
+                    }, 300);
+
+                }
+            );
+        }
     }
 };
 app.animations = {
@@ -162,10 +227,6 @@ app.animations = {
         } else {
             $('.showOnScroll').css('opacity', 1);
         }
-
-        setTimeout(function () {
-            $('.intro-block').addClass('can-hover');
-        }, 1500);
     },
     showCalc: function () {
         var $calculator = $('.calculator-profit'),
@@ -333,7 +394,9 @@ app.forms = {
 
 app.init = function () {
     app.main.sliders();
+    app.main.scrollBottom();
     app.main.profitCalculator();
+    app.main.investBlocks();
     app.popups.init();
     app.forms.init();
     app.animations.showOnScroll();
